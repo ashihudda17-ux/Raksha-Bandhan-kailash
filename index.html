@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Kailash Bhai ❤️</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ffe6ef,#fff5d9);
+    color:#5b3044;
+    text-align:center;
+}
+
+.page{
+    min-height:100vh;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+}
+
+.page.active{
+    display:flex;
+}
+
+.card{
+    width:100%;
+    max-width:430px;
+    background:rgba(255,255,255,0.9);
+    padding:30px 20px;
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+.emoji{
+    font-size:65px;
+    animation:float 2s infinite ease-in-out;
+}
+
+h1{
+    font-size:28px;
+}
+
+h2{
+    font-size:23px;
+}
+
+p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin:8px 0;
+    border:none;
+    border-radius:18px;
+    background:#ff719c;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+.secondary{
+    background:white;
+    color:#d95780;
+    border:2px solid #ffd0df;
+}
+
+textarea{
+    width:100%;
+    min-height:170px;
+    border:2px solid #ffd0df;
+    border-radius:18px;
+    padding:15px;
+    font-size:15px;
+    resize:none;
+}
+
+input[type="file"]{
+    display:none;
+}
+
+.upload{
+    display:block;
+    padding:18px;
+    border:2px dashed #ff9fbd;
+    border-radius:18px;
+    cursor:pointer;
+    color:#b34d70;
+    font-weight:bold;
+}
+
+#preview{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    margin-top:15px;
+}
+
+#preview img{
+    width:90px;
+    height:110px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.rakhi{
+    font-size:80px;
+    animation:spin 5s linear infinite;
+}
+
+.count{
+    font-size:55px;
+    font-weight:bold;
+    margin:20px;
+}
+
+.photo{
+    width:230px;
+    height:290px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.heart{
+    position:fixed;
+    top:-20px;
+    animation:fall 4s linear forwards;
+    pointer-events:none;
+}
+
+@keyframes float{
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+@keyframes fall{
+
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="page1">
+
+<div class="card">
+
+<div class="emoji">💌</div>
+
+<h1>A Little Surprise For You...</h1>
+
+<p>
+Someone has made a tiny Raksha Bandhan surprise just for you. ❤️
+</p>
+
+<button onclick="nextPage(2)">
+Open The Surprise ✨
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 2 -->
+
+<div class="page" id="page2">
+
+<div class="card">
+
+<div class="emoji">🌸</div>
+
+<h2>Who's sending this?</h2>
+
+<button onclick="nextPage(3)">
+👧 I'm your sister, sending this to my brother
+</button>
+
+<button class="secondary" onclick="nextPage(3)">
+👦 I'm your brother, sending this to my sister
+</button>
+
+<button class="secondary" onclick="nextPage(3)">
+👧 I'm your sister, sending this to my sister
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 3 -->
+
+<div class="page" id="page3">
+
+<div class="card">
+
+<div class="emoji">🫶</div>
+
+<h2>What do you call them?</h2>
+
+<button onclick="nextPage(4)">
+Kailash Bhai ❤️
+</button>
+
+<button class="secondary" onclick="nextPage(4)">
+Bhaiya 🌸
+</button>
+
+<button class="secondary" onclick="nextPage(4)">
+Brother 🥹
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 4 -->
+
+<div class="page" id="page4">
+
+<div class="card">
+
+<div class="emoji">💭</div>
+
+<h2>One little question...</h2>
+
+<p>
+How should this wish feel?
+</p>
+
+<button onclick="nextPage(5)">
+🥹 Cute & Emotional
+</button>
+
+<button class="secondary" onclick="nextPage(5)">
+✨ Surprise Me
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 5 -->
+
+<div class="page" id="page5">
+
+<div class="card">
+
+<div class="emoji">❤️</div>
+
+<h2>A Message For Kailash Bhai</h2>
+
+<textarea id="message">
+Kuch rishte explain nahi karne padte...
+bas feel hote hain. ❤️
+
+Tu sirf mera bhai nahi,
+meri life ka woh insaan hai
+jiske saath main lad bhi sakti hoon,
+pareshan bhi kar sakti hoon
+aur bina soche apni baat keh sakti hoon.
+
+Shayad main har baar bol nahi paati,
+but you genuinely mean a lot to me.
+
+Happy Raksha Bandhan,
+Kailash Bhai. 🫶❤️
+</textarea>
+
+<button onclick="nextPage(6)">
+Next — Add Memories 📸
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 6 -->
+
+<div class="page" id="page6">
+
+<div class="card">
+
+<div class="emoji">📸</div>
+
+<h2>Add Your Memories</h2>
+
+<p>
+Kailash Bhai ki photos select karo ❤️
+</p>
+
+<label class="upload">
+
+＋ Choose Photos
+
+<input
+type="file"
+id="photos"
+accept="image/*"
+multiple
+>
+
+</label>
+
+<div id="preview"></div>
+
+<button onclick="nextPage(7)">
+Continue ✨
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 7 -->
+
+<div class="page" id="page7">
+
+<div class="card">
+
+<div class="rakhi">
+🪢
+</div>
+
+<h2>Something Special Is Coming...</h2>
+
+<div class="count" id="count">
+3
+</div>
+
+<p>
+3... 2... 1... ❤️
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 8 -->
+
+<div class="page" id="page8">
+
+<div class="card">
+
+<div class="rakhi">
+🎀
+</div>
+
+<h1>
+Happy Raksha Bandhan,
+<br>
+Kailash Bhai! ❤️
+</h1>
+
+<div id="finalPhoto"></div>
+
+<p id="finalMessage"></p>
+
+<button onclick="hearts()">
+Make It Rain Hearts 💕
+</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+let selectedPhotos = [];
+
+
+function nextPage(number){
+
+    document.querySelectorAll(".page").forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+    document.getElementById("page" + number)
+    .classList.add("active");
+
+
+    if(number === 7){
+
+        startCountdown();
+
+    }
+
+    if(number === 8){
+
+        showFinal();
+
+    }
+
+}
+
+
+
+document.getElementById("photos")
+.addEventListener("change", function(event){
+
+    selectedPhotos =
+    Array.from(event.target.files);
+
+    let preview =
+    document.getElementById("preview");
+
+    preview.innerHTML = "";
+
+
+    selectedPhotos.forEach(function(file){
+
+        let image =
+        document.createElement("img");
+
+        image.src =
+        URL.createObjectURL(file);
+
+        preview.appendChild(image);
+
+    });
+
+});
+
+
+
+function startCountdown(){
+
+    let number = 3;
+
+    let count =
+    document.getElementById("count");
+
+    count.innerText = number;
+
+
+    let timer =
+    setInterval(function(){
+
+        number--;
+
+        if(number > 0){
+
+            count.innerText = number;
+
+        }
+
+        else{
+
+            clearInterval(timer);
+
+            count.innerText = "❤️";
+
+            setTimeout(function(){
+
+                nextPage(8);
+
+            },700);
+
+        }
+
+    },1000);
+
+}
+
+
+
+function showFinal(){
+
+    let message =
+    document.getElementById("message").value;
+
+    document.getElementById("finalMessage")
+    .innerText = message;
+
+
+    let container =
+    document.getElementById("finalPhoto");
+
+    container.innerHTML = "";
+
+
+    if(selectedPhotos.length > 0){
+
+        let image =
+        document.createElement("img");
+
+        image.className = "photo";
+
+        image.src =
+        URL.createObjectURL(selectedPhotos[0]);
+
+        container.appendChild(image);
+
+    }
+
+
+    hearts();
+
+}
+
+
+
+function hearts(){
+
+    for(let i=0;i<35;i++){
+
+        let heart =
+        document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerText =
+        ["❤️","💕","🌸","✨","🫶"]
+        [Math.floor(Math.random()*5)];
+
+        heart.style.left =
+        Math.random()*100 + "vw";
+
+        heart.style.fontSize =
+        (15 + Math.random()*20) + "px";
+
+        heart.style.animationDuration =
+        (2 + Math.random()*3) + "s";
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(function(){
+
+            heart.remove();
+
+        },5000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
